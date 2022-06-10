@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Alex's "Top Ten" Favorite places to visit game</title>
+
+        <link rel="stylesheet" href="mapMania.css">
+        <script src="mapMania.js"></script>
+        <style>
+            #myMapID{
+                height: 100%;
+                width: 100%;
+                zoom: 1;
+            }
+
+            html, body {
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+
+        </style>
+    </head>
+
+    <body onload="initApplication()">
+        <h1>Alex's "Top Ten" Favorite places to visit game</h1>
+        Hint : <input id="hint-id" type="text" value ="" size="100" disabled>
+        <br>
+        <br>
+        Score: <input id="score-id" type ="text" value="" size="50" disabled>
+        <br>
+        <br>
+
+        <div id="myMapID"></div>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGpXxPk4YXuFyuvvbWQl8SOW4H7abK2IE&callback=initMap" async></script>
+    </body>
+</html>

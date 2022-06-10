@@ -88,6 +88,24 @@ app.get('/test', (request, response) => {
     response.end('<h3>The End.</h3>');
 })
 
+var favoritePlaces = [
+	{content:'<strong>#1 Lombard, IL... Home Sweet Home!<stron>', coordinates:{lat:41.837546,lng:88.0123}, iconImagePath:"one.png"},
+	{content:'<strong>#1 Lombard, IL... Home Sweet Home!<stron>', coordinates:{lat:41.837546,lng:88.0123}, iconImagePath:"one.png"},
+	{content:'<strong>#1 Lombard, IL... Home Sweet Home!<stron>', coordinates:{lat:41.837546,lng:88.0123}, iconImagePath:"one.png"},
+	{content:'<strong>#1 Lombard, IL... Home Sweet Home!<stron>', coordinates:{lat:41.837546,lng:88.0123}, iconImagePath:"one.png"},
+	{content:'<strong>#1 Lombard, IL... Home Sweet Home!<stron>', coordinates:{lat:41.837546,lng:88.0123}, iconImagePath:"one.png"},
+	{content:'<strong>#1 Lombard, IL... Home Sweet Home!<stron>', coordinates:{lat:41.837546,lng:88.0123}, iconImagePath:"one.png"},
+	{content:'<strong>#1 Lombard, IL... Home Sweet Home!<stron>', coordinates:{lat:41.837546,lng:88.0123}, iconImagePath:"one.png"},
+	{content:'<strong>#1 Lombard, IL... Home Sweet Home!<stron>', coordinates:{lat:41.837546,lng:88.0123}, iconImagePath:"one.png"}
+];
+
+app.get('/favorite-places', (request, response) => {
+	console.log('Calling "/favorite-places" on the Node.js server.')
+	response.type('application/json')
+	response.send(JSON.stringify(favoritePlaces, null, 4))
+})
+
+
 // Return Batman as JSON.
 var spiderMan = {
 	"firstName":"Bruce",
