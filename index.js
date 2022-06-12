@@ -9,7 +9,7 @@ const majorVersion = 1
 const minorVersion = 2
 
 // Use Express to publish static HTML, CSS, and JavaScript files that run in the browser. 
-app.use(express.static(__dirname + '/static'))
+app.use(express.static(__dirname + '/MapMania'))
 
 // The app.get functions below are being processed in Node.js running on the server.
 // Implement a custom About page.
@@ -89,14 +89,16 @@ app.get('/test', (request, response) => {
 })
 
 var favoritePlaces = [
-	{content:'<strong>#1 Lombard, IL... Home Sweet Home!<stron>', coordinates:{lat:41.837546,lng:88.0123}, iconImagePath:"one.png"},
-	{content:'<strong>#1 Lombard, IL... Home Sweet Home!<stron>', coordinates:{lat:41.837546,lng:88.0123}, iconImagePath:"one.png"},
-	{content:'<strong>#1 Lombard, IL... Home Sweet Home!<stron>', coordinates:{lat:41.837546,lng:88.0123}, iconImagePath:"one.png"},
-	{content:'<strong>#1 Lombard, IL... Home Sweet Home!<stron>', coordinates:{lat:41.837546,lng:88.0123}, iconImagePath:"one.png"},
-	{content:'<strong>#1 Lombard, IL... Home Sweet Home!<stron>', coordinates:{lat:41.837546,lng:88.0123}, iconImagePath:"one.png"},
-	{content:'<strong>#1 Lombard, IL... Home Sweet Home!<stron>', coordinates:{lat:41.837546,lng:88.0123}, iconImagePath:"one.png"},
-	{content:'<strong>#1 Lombard, IL... Home Sweet Home!<stron>', coordinates:{lat:41.837546,lng:88.0123}, iconImagePath:"one.png"},
-	{content:'<strong>#1 Lombard, IL... Home Sweet Home!<stron>', coordinates:{lat:41.837546,lng:88.0123}, iconImagePath:"one.png"}
+	{"content":"Kyoto", "coordinates":{"lat":35.0116,"lng":135.7681}},
+    {"content":"Tokyo", "coordinates":{"lat":35.6762,"lng":139.6503}},
+    {"content":"Aruba", "coordinates":{"lat":12.5211,"lng":-69.9683}},
+    {"content":"Las Vegas", "coordinates":{"lat":36.1716,"lng":-115.1391}},
+    {"content":"Tampa Bay", "coordinates":{"lat":27.7634,"lng":-82.5437}},
+    {"content":"Paris", "coordinates":{"lat":48.8566,"lng":2.3522}},
+    {"content":"Seoul", "coordinates":{"lat":37.532600,"lng":127.024612}},
+    {"content":"New York", "coordinates":{"lat":40.7128,"lng":-74.0060}},
+    {"content":"Hawaii", "coordinates":{"lat":19.741755,"lng":-155.844437}},
+    {"content":"Chicago", "coordinates":{"lat":41.881832,"lng":-87.623177}}
 ];
 
 app.get('/favorite-places', (request, response) => {
