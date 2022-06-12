@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Alex's "Top Ten" Favorite places to visit game</title>
+
+        <link rel="stylesheet" href="index.css">
+        <script src="index.js"></script>
+        <style>
+            #myMapID {
+                height: 100%;
+                width: 100%;
+                zoom: 1;
+            }
+
+            html, body {
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+        </style>
+    </head>
+    </div>
+</div>
+    <body>
+        <h1>Alex's "Top Ten" Favorite places to visit game</h1>
+<button id="infoButton">Instructions!</button><br><br>
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Game Instructions</h2>
+    </div>
+    <div class="modal-body">
+      <p>This is a game where you try to find my faovorite locations!</p>
+      <p>Use the console to track your progress! it will tell you if you can see the location on the screen!</p>
+      <p>You must zoom in directly on the city for it to find the location!</p>
+      <p>Don't forget that the hints at the top will help you find the location!</p>
+      <p>If you want to cheat and see all the locations double click the score!</p>
+    </div>
+  </div>
+</div>
+
+<script>
+var modal = document.getElementById("modal");
+var btn = document.getElementById("infoButton");
+var span = document.getElementsByClassName("close")[0];
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+span.onclick = function() {
+  modal.style.display = "none";
+}
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+        Hint : <input id="hint-id" type="text" value ="" size="40" disabled>
+        <br>
+        <br>
+       <button class=" button" onclick = "win()"> Score:</button>  <input id="score-id" type ="text" value="" size="5" disabled>
+        <br>
+        <br>
+        <div id="myMapID"></div>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGpXxPk4YXuFyuvvbWQl8SOW4H7abK2IE&callback=initMap"></script>
+    </body>
+</html>
